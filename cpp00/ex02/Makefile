@@ -5,14 +5,14 @@ SRCS		=	Account.cpp \
 
 OBJS		=	$(SRCS:.cpp=.o)
 
-CC			=	clang++ -g3 -fsanitize=address
+CC			=	c++ 
 
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror -std=c++98
 
 all:			$(NAME)
 
 %.o: %.c
-				$(CC) $(CFLAGS) -c $< -o $@2
+				$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) :		$(OBJS)
 					$(CC) $(CFLAGS) $(OBJS) -o $@
