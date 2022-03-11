@@ -6,38 +6,38 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 14:56:50 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/11 23:10:30 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/11 23:10:43 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int		main(void)
 {
 	std::cout << "\nConstructors\n--------------" << std::endl;
-	ScavTrap	michel("Michel");
-	std::cout << "name = " << michel.getName() <<
-		" Hitpoints = " << michel.getHitPoints() <<
-		" Energypoints = " << michel.getEnergyPoints() <<
-		" Attack dmg = " << michel.getAttackDamage() << std::endl << std::endl;
+	FragTrap	Pierre("Pierre");
+	std::cout << "name = " << Pierre.getName() <<
+		" Hitpoints = " << Pierre.getHitPoints() <<
+		" Energypoints = " << Pierre.getEnergyPoints() <<
+		" Attack dmg = " << Pierre.getAttackDamage() << std::endl << std::endl;
 
-	ClapTrap	Yves("Yves");
-	std::cout << "name = " << Yves.getName() <<
-		" Hitpoints = " << Yves.getHitPoints() <<
-		" Energypoints = " << Yves.getEnergyPoints() <<
-		" Attack dmg = " << Yves.getAttackDamage() << std::endl << std::endl;
+	ClapTrap	Albert("Albert");
+	std::cout << "name = " << Albert.getName() <<
+		" Hitpoints = " << Albert.getHitPoints() <<
+		" Energypoints = " << Albert.getEnergyPoints() <<
+		" Attack dmg = " << Albert.getAttackDamage() << std::endl << std::endl;
 
 	std::cout << "Actions\n--------------" << std::endl;
-	Yves.beRepaired(50);
-	michel.attack("Yves");
-	Yves.takeDamage(michel.getAttackDamage());
-	Yves.attack("michel");
-	michel.takeDamage(Yves.getAttackDamage());
-	michel.takeDamage(58);
-	michel.guardGate();
-	michel.beRepaired(100);
-	michel.takeDamage(1000);
+	Albert.beRepaired(50);
+	Pierre.attack("Albert");
+	Albert.takeDamage(Pierre.getAttackDamage());
+	Albert.attack("Pierre");
+	Pierre.takeDamage(Albert.getAttackDamage());
+	Pierre.takeDamage(58);
+	Pierre.highFivesGuys();
+	Pierre.beRepaired(100);
+	Pierre.takeDamage(1000);
 	
 	std::cout << "\nDestructors\n--------------" << std::endl;
 	

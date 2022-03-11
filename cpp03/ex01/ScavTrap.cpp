@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 17:14:12 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/11 22:09:38 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/11 22:48:58 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,43 +55,6 @@ void	ScavTrap::attack(const std::string& target)
 	{
 		std::cout << "ScavTrap" << this->_name << "has no more energy to attack" << std::endl;
 	}
-}
-
-void	ScavTrap::takeDamage(unsigned int amount)
-{
-	if (amount <= 0 || amount >= 2147483648)
-	{
-		std::cout << "ScavTrap " << this->_name << " take damage causing 0 points of damage. Total HP: " << this->_HitPoints << std::endl;
-		return ;
-	}
-	if (amount >= this->_HitPoints)
-	{
-		this->_HitPoints = 0;
-		std::cout << "ScavTrap " << this->_name << " take damage causing " << amount << " points of damage. Total HP: " << this->_HitPoints << std::endl;
-		return ;
-	}
-	else
-	{
-		this->_HitPoints -= amount;
-		std::cout << "ScavTrap " << this->_name << " take damage causing " << amount << " points of damage. Total HP: " << this->_HitPoints << std::endl;
-	}
-}
-
-void	ScavTrap::beRepaired(unsigned int amount)
-{
-	if (this->_EnergyPoints <= 0)
-	{
-		std::cout << "ScavTrap " << this->_name << " has no more energy to repaired" << std::endl;
-		return ;
-	}
-	if (amount <= 0 || amount >= 2147483648)
-	{
-		std::cout << "ScavTrap " << this->_name << " earned 0 Hit Points. Total HP: " << this->_HitPoints << std::endl;
-		return ;
-	}
-	this->_HitPoints += amount;
-	this->_EnergyPoints--;
-	std::cout << "ScavTrap " << this->_name << " earned " << amount << " Hit Points. Total HP: " << this->_HitPoints << " EnergyPoints: " << this->_EnergyPoints << std::endl;
 }
 
 void	ScavTrap::guardGate(void)
