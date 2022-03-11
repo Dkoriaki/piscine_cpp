@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 15:35:08 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/04 00:07:37 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/11 22:02:13 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@
 
 ClapTrap::ClapTrap(void) : _name("Null"), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0)
 {
-	std::cout << _name << " has been created." << std::endl;
+	std::cout << "ClapTrap " << _name << " has been created." << std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0)
 {
-	std::cout << _name << " has been created." << std::endl;
+	std::cout << "ClapTrap " << _name << " has been created." << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src)
@@ -34,7 +34,7 @@ ClapTrap::ClapTrap(ClapTrap const & src)
 
 ClapTrap::~ClapTrap(void)
 {
-	std::cout << _name  << " has been destructed." << std::endl;
+	std::cout << "ClapTrap " << _name  << " has been destructed." << std::endl;
 }
 
 /*
@@ -118,7 +118,7 @@ unsigned int	ClapTrap::getAttackDamage(void)
 
 ClapTrap &	ClapTrap::operator=(ClapTrap const & rhs)
 {
-	std::cout << "Assignment operator called" << std::endl;
+	std::cout << "ClapTrap Assignment operator called" << std::endl;
 	if (this != &rhs)
 	{
 		_name = rhs._name;

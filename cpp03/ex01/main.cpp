@@ -6,35 +6,40 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 14:56:50 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/04 00:07:45 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/11 22:31:25 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int		main(void)
 {
-	ClapTrap	Yves("Yves");
-	ClapTrap	Jack("Jack");
+	std::cout << "\nConstructors\n--------------" << std::endl;
+	ScavTrap	michel("Michel");
+	std::cout << "name = " << michel.getName() <<
+		" Hitpoints = " << michel.getHitPoints() <<
+		" Energypoints = " << michel.getEnergyPoints() <<
+		" Attack dmg = " << michel.getAttackDamage() << std::endl << std::endl;
 
-	Yves.attack("Jack");
-	Jack.takeDamage(Yves.getAttackDamage());
-	Yves.takeDamage(42);
-	Yves.takeDamage(-42);
-	Yves.beRepaired(45);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
-	Jack.beRepaired(1);
+	ClapTrap	Yves("Yves");
+	std::cout << "name = " << Yves.getName() <<
+		" Hitpoints = " << Yves.getHitPoints() <<
+		" Energypoints = " << Yves.getEnergyPoints() <<
+		" Attack dmg = " << Yves.getAttackDamage() << std::endl << std::endl;
+
+	std::cout << "Actions\n--------------" << std::endl;
+	michel.attack("Yves");
+	Yves.beRepaired(50);
+	Yves.takeDamage(michel.getAttackDamage());
+	Yves.attack("michel");
+	michel.takeDamage(Yves.getAttackDamage());
+	michel.takeDamage(58);
+	michel.guardGate();
+	michel.beRepaired(100);
+	michel.takeDamage(1000);
+	
+	std::cout << "\nDestructors\n--------------" << std::endl;
 	
 	return (0);
 }

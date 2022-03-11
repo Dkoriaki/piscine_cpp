@@ -1,45 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/03 15:35:34 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/11 22:02:14 by dkoriaki         ###   ########.fr       */
+/*   Created: 2022/03/11 17:08:01 by dkoriaki          #+#    #+#             */
+/*   Updated: 2022/03/11 22:09:35 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-# include <iostream>
-# include <string>
+#include "ClapTrap.hpp"
 
-class ClapTrap
+class	ScavTrap : public ClapTrap
 {
 	public:
-		ClapTrap(void);
-		ClapTrap(std::string name);
-		ClapTrap(ClapTrap const & src);
-		~ClapTrap(void);
+		ScavTrap(void);
+		ScavTrap(std::string name);
+		ScavTrap(ScavTrap const & src);
+		~ScavTrap(void);
 
-		ClapTrap &	operator=(ClapTrap const & rhs);
+		ScavTrap &	operator=(ScavTrap const & rhs);
 
 		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
-
-		std::string		getName(void);
-		unsigned int	getHitPoints(void);
-		unsigned int	getEnergyPoints(void);
-		unsigned int	getAttackDamage(void);
-
-	protected:
-		std::string		_name;
-		unsigned int	_HitPoints;
-		unsigned int	_EnergyPoints;
-		unsigned int	_AttackDamage;
+		void	guardGate(void);
 };
 
 #endif
