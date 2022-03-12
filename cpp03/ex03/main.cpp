@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 14:56:50 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/12 18:47:37 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/12 19:05:28 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int		main(void)
 {
-	DiamondTrap		Jules("Jules");
+	DiamondTrap		Jules;
 
 	std::cout << "my name is " << Jules.getName() << std::endl;
 	

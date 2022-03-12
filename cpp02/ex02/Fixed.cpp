@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:35:40 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/03 16:23:17 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/12 18:58:17 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,22 +59,22 @@ int		Fixed::toInt(void) const
 	return (this->_nb >> this->_bits_count);
 }
 
-static const Fixed	&	Fixed::min(Fixed & a, Fixed & b)
+const Fixed	&	Fixed::min(Fixed & a, Fixed & b)
 {
 	return (a > b ? b : a);
 }
 
-static const Fixed	&	Fixed::min(Fixed const & a, Fixed const & b)
+const Fixed	&	Fixed::min(Fixed const & a, Fixed const & b)
 {
 	return (a > b ? b : a);
 }
 
-static const Fixed	&	Fixed::max(Fixed & a, Fixed & b)
+const Fixed	&	Fixed::max(Fixed & a, Fixed & b)
 {
 	return (a > b ? a : b);
 }
 
-static const Fixed	&	Fixed::max(Fixed const & a, Fixed const & b)
+const Fixed	&	Fixed::max(Fixed const & a, Fixed const & b)
 {
 	return (a > b ? a : b);
 }
