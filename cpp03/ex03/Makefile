@@ -1,4 +1,4 @@
-NAME	=	AnOtherOne
+NAME	=	DiamondTrap
 
 SRCS		=	main.cpp \
 					ClapTrap.cpp \

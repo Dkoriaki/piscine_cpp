@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 17:08:01 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/12 16:57:50 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/13 02:01:01 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class	ScavTrap : virtual public ClapTrap
 		ScavTrap &	operator=(ScavTrap const & rhs);
 
 		void	attack(const std::string& target);
+		int		ret_EP(void);
 		void	guardGate(void);
 };
 

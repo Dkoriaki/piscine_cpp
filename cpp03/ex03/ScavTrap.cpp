@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 17:14:12 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/11 22:48:58 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/13 02:02:55 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ ScavTrap::~ScavTrap(void)
 /*
 //	Member functions
 */
+
+int		ScavTrap::ret_EP(void)
+{
+	return(50);
+}
 
 void	ScavTrap::attack(const std::string& target)
 {
