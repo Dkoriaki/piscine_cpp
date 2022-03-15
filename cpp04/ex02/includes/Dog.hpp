@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 11:35:10 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/16 00:28:25 by dkoriaki         ###   ########.fr       */
+/*   Created: 2022/03/14 11:35:14 by dkoriaki          #+#    #+#             */
+/*   Updated: 2022/03/16 00:10:38 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 #include <string>
 #include <iostream>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal
+class Dog : public AAnimal
 {
 	public:
-		Cat();
-		Cat(Cat const & src);
-		~Cat();
+		Dog();
+		Dog(Dog const & src);
+		~Dog();
 
-		Cat &	operator=(Cat const & rhs);
+		Dog &	operator=(Dog const & rhs);
 
 		virtual void	makeSound(void) const;
 		virtual void	TalkAboutHisIdeas(void) const;

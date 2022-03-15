@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/14 11:35:10 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/16 00:28:25 by dkoriaki         ###   ########.fr       */
+/*   Created: 2022/03/15 12:48:55 by dkoriaki          #+#    #+#             */
+/*   Updated: 2022/03/15 15:39:55 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-# define CAT_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-#include <string>
-#include <iostream>
-#include "Animal.hpp"
-#include "Brain.hpp"
+# include <iostream>
+# include <string>
 
-class Cat : public Animal
+class Brain
 {
+
 	public:
-		Cat();
-		Cat(Cat const & src);
-		~Cat();
 
-		Cat &	operator=(Cat const & rhs);
+		Brain();
+		Brain( Brain const & src );
+		~Brain();
 
-		virtual void	makeSound(void) const;
-		virtual void	TalkAboutHisIdeas(void) const;
+		void	printIdeas(void);
+
+		Brain &		operator=( Brain const & rhs );
 
 	private:
-		Brain	*_brain;
+
+		std::string	_ideas[100];
 
 };
 
-#endif
+#endif /* *********************************************************** BRAIN_H */

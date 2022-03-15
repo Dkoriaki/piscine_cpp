@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:35:12 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 16:25:52 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/16 00:06:05 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ Dog::Dog(void) : Animal()
 	std::cout << "Dog has been created."  << std::endl;
 }
 
-Dog::Dog(Dog const & src) : Animal(), _brain(new Brain(*src._brain))
+Dog::Dog(Dog const & src) : Animal(src), _brain(new Brain(*src._brain))
 {
-	std::cout << "Dog copy constructor called" << this->_type << "]" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
 }
 
 Dog::~Dog(void)

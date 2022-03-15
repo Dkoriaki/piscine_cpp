@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 16:49:01 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 12:34:32 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 23:40:59 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ WrongCat::WrongCat(void)
 WrongCat::WrongCat(WrongCat const & src)
 {
 	*this = src;
-	std::cout << "WrongCat copy constructor called" << this->_type << "]" << std::endl;
+	std::cout << "WrongCat copy constructor called" << std::endl;
 }
 
 WrongCat::~WrongCat(void)

@@ -6,11 +6,11 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 13:50:27 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/16 00:05:49 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/16 00:27:37 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Dog.hpp"
 
@@ -21,7 +21,7 @@ int		main(void)
 	int		nbCats(nbAnimals - nbDogs);
 
 	std::cout << "\e[1;32mConstructors\e[0m" << std::endl;
-	Animal	*animals[nbAnimals];
+	AAnimal	*animals[nbAnimals];
 
 	// Dogs creation
 	for (int i(0); i < nbDogs; i++)
@@ -51,9 +51,10 @@ int		main(void)
 	Dog	*toto = new Dog;
 	Dog	titi(*toto);
 	delete toto;
-	std::cout << "type : " << titi.getType() << std::endl;
 	titi.makeSound();
 	titi.TalkAboutHisIdeas();
+
+	//AAnimal		abstractAnimal;// uncomment to see abstract compilation error
 
 	std::cout << "\e[1;31m\nDestructors\e[0m" << std::endl;
 
