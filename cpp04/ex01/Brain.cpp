@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 12:49:02 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 13:10:19 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 15:40:22 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-Brain::Brain() : _indexIdea(0)
+Brain::Brain()
 {
 	for (int i(0); i < 100; i++)
 	{
-		_ideas[i] = "";
+		_ideas[i] = "I'm hungry";
 	}
 	std::cout << "Brain has been created." << std::endl;
 }
@@ -41,14 +41,6 @@ Brain::~Brain()
 	std::cout << "Brain has been destructed." << std::endl;
 }
 
-/*
-** --------------------------------- FUNCTIONS --------------------------------
-*/
-
-void	Brain::setIdea(std::string const idea)
-{
-	this->_ideas[_indexIdea++] = idea;
-}
 
 /*
 ** --------------------------------- OVERLOAD ---------------------------------
@@ -56,10 +48,11 @@ void	Brain::setIdea(std::string const idea)
 
 Brain &				Brain::operator=( Brain const & rhs )
 {
-	//if ( this != &rhs )
-	//{
-		//this->_value = rhs.getValue();
-	//}
+	if ( this != &rhs )
+	{
+		for (int i(0); i < 100; i++)
+			this->_ideas[i] = rhs._ideas[i];
+	}
 	return *this;
 }
 
@@ -67,6 +60,12 @@ Brain &				Brain::operator=( Brain const & rhs )
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
+
+void	Brain::printIdeas(void)
+{
+	for (int i(0); i < 100; i++)
+		std::cout << "idea[" << i << "] = " << this->_ideas[i] << std::endl;
+}
 
 
 /*

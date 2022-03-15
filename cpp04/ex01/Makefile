@@ -1,11 +1,10 @@
-NAME	=	Animals
+NAME	=	AnimalsHaveBrainOMG
 
 SRCS		=	main.cpp \
 					Animal.cpp \
 					Cat.cpp \
-					WrongAnimal.cpp \
-					WrongCat.cpp \
-					Dog.cpp
+					Dog.cpp \
+					Brain.cpp
 
 OBJS		=	$(SRCS:.cpp=.o)
 

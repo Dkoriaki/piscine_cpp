@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:35:03 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 12:33:27 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 15:41:18 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,11 @@ void	Animal::makeSound(void) const
 std::string	Animal::getType(void) const
 {
 	return (_type);
+}
+
+void	Animal::TalkAboutHisIdeas(void) const
+{
+	std::cout << "I dont have any Ideas" << std::endl;
 }
 
 /*

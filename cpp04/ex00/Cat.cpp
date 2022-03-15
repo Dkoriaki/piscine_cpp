@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:35:08 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 12:33:43 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 16:28:03 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 //	Construcors / Desctructor
 */
 
-Cat::Cat(void)
+Cat::Cat(void) : Animal()
 {
 	this->_type = "cat";
 	std::cout << "Cat has been created."  << std::endl;
@@ -25,7 +25,7 @@ Cat::Cat(void)
 
 Cat::Cat(Cat const & src)
 {
-	*this = src;
+	*this->_type = src._type;
 	std::cout << "Cat copy constructor called" << this->_type << "]" << std::endl;
 }
 

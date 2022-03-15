@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:35:12 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 12:34:19 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 16:25:52 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,20 +17,21 @@
 //	Construcors / Desctructor
 */
 
-Dog::Dog(void)
+Dog::Dog(void) : Animal()
 {
+	_brain = new Brain;
 	this->_type = "Dog";
 	std::cout << "Dog has been created."  << std::endl;
 }
 
-Dog::Dog(Dog const & src)
+Dog::Dog(Dog const & src) : Animal(), _brain(new Brain(*src._brain))
 {
-	*this = src;
 	std::cout << "Dog copy constructor called" << this->_type << "]" << std::endl;
 }
 
 Dog::~Dog(void)
 {
+	delete _brain;
 	std::cout << "Dog has been destructed." << std::endl;
 }
 
@@ -41,6 +42,11 @@ Dog::~Dog(void)
 void	Dog::makeSound(void) const
 {
 	std::cout << "Wouaaaffff" << std::endl;
+}
+
+void	Dog::TalkAboutHisIdeas(void) const
+{
+	this->_brain->printIdeas();
 }
 
 /*

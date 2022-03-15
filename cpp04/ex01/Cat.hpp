@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:35:10 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 12:33:34 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 15:04:38 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <string>
 #include <iostream>
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
@@ -27,6 +28,9 @@ class Cat : public Animal
 		Cat &	operator=(Cat const & rhs);
 
 		virtual void	makeSound(void) const;
+
+	private:
+		Brain	*_brain;
 
 };
 

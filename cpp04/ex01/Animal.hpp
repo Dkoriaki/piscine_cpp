@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:35:06 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/14 17:10:21 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 15:41:11 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,11 @@ class Animal
 
 		virtual void	makeSound(void) const;
 		std::string		getType(void) const;
+		virtual void	TalkAboutHisIdeas(void) const;
 
 	protected:
 		std::string	_type;
+
 };
 
 #endif

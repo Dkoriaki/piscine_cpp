@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 12:48:55 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 13:06:27 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 15:39:55 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define BRAIN_HPP
 
 # include <iostream>
-# include <string>s
+# include <string>
 
 class Brain
 {
@@ -25,14 +25,12 @@ class Brain
 		Brain( Brain const & src );
 		~Brain();
 
-		void	setIdea(std::string const idea);
-		void	printIdeas(void)
+		void	printIdeas(void);
 
 		Brain &		operator=( Brain const & rhs );
 
 	private:
 
-		int			_indexIdea;
 		std::string	_ideas[100];
 
 };

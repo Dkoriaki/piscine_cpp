@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/14 11:35:08 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/15 12:33:43 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/15 16:27:25 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,19 @@
 
 Cat::Cat(void)
 {
+	_brain = new Brain;
 	this->_type = "cat";
 	std::cout << "Cat has been created."  << std::endl;
 }
 
-Cat::Cat(Cat const & src)
+Cat::Cat(Cat const & src) : Animal(), _brain(new Brain(*src._brain))
 {
-	*this = src;
 	std::cout << "Cat copy constructor called" << this->_type << "]" << std::endl;
 }
 
 Cat::~Cat(void)
 {
+	delete _brain;
 	std::cout << "Cat has been destructed." << std::endl;
 }
 
