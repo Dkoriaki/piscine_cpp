@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:03:59 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/18 19:34:32 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/18 16:54:41 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ void	Bureaucrat::gradeDown(void)
 		<< "->" << this->getGrade() << "]" << std::endl;
 }
 
-void	Bureaucrat::signForm(Form & form)
+void	Bureaucrat::signForm(AForm & form)
 {
 	try
 	{
@@ -101,6 +101,19 @@ void	Bureaucrat::signForm(Form & form)
 	{
 		std::cerr << this->getName() << " couldn't sign " << form.getName()
 		<< " because " << e.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(AForm const & form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << this->getName() << " execute " << form.getName() << " with success" << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << this->getName() << " couldn't execute " << form.getName() << std::endl;
 	}
 }
 

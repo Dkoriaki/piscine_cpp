@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:04:17 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/18 10:12:24 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/18 12:20:25 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 #include <iostream>
 #include <string>
-#include "Form.hpp"
+#include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
@@ -43,7 +43,8 @@ class Bureaucrat
 		void			gradeUp(void);
 		void			gradeDown(void);
 		
-		void			signForm(Form & form);
+		void			signForm(AForm & form);
+		void			executeForm(AForm const & form);
 
 	private:
 		Bureaucrat();
