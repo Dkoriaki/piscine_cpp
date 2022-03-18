@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:03:59 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/17 15:59:48 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/17 17:50:03 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ void	Bureaucrat::signForm(Form & form)
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		//Faut faire un msg personalisé //std::cout << e.what() << std::endl;
 	}
 	
 }
