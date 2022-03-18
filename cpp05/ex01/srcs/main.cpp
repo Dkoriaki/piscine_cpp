@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:03:16 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/18 10:44:19 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/18 11:24:17 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,24 +63,6 @@ int		main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
-	std::cout << "\e[1;32m\n1st Sign failed cause of to low grade but after gradeUp it's a succes !\e[0m" << std::endl;
-	try
-	{
-		Bureaucrat	Michel("Michel", 11);
-		std::cout << Michel << std::endl;
-		Form		f3("LAZ", 10);
-		std::cout << f3 << std::endl;
-		Michel.signForm(f3);
-		std::cout << f3 << std::endl;
-		Michel.gradeUp();
-		Michel.signForm(f3);
-		std::cout << f3 << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-
 	std::cout << "\e[1;31m\nGradeDown Error\e[0m" << std::endl;
 	try
 	{
@@ -94,6 +76,28 @@ int		main(void)
 		std::cerr << e.what() << std::endl;
 	}
 
+	std::cout << "\e[1;31m\nBad Form init with to low grade Error\e[0m" << std::endl;
+	try
+	{
+		Form	f4("Lowwww", 160);
+		std::cout << f4 << std::endl;
+		
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+
+	std::cout << "\e[1;31m\nBad Form init with to High grade Error\e[0m" << std::endl;
+	try
+	{
+		Form	f5("Highhhh", 0);
+		std::cout << f5 << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
 	
 	
 	return (0);
