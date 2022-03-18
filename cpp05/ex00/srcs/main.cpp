@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:03:16 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/17 15:58:35 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/18 10:25:41 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int		main(void)
 	}
 	catch(std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	
 	std::cout << "\e[1;31m\nBad init with to Low grade Error\e[0m" << std::endl;
@@ -34,7 +34,18 @@ int		main(void)
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
+	}
+
+	std::cout << "\e[1;31m\nBad init with to High grade Error\e[0m" << std::endl;
+	try
+	{
+		Bureaucrat	Jhonny("Jhon", 0);
+		std::cout << Jhonny << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << "\e[1;31m\nGradeDown Error\e[0m" << std::endl;
@@ -47,7 +58,7 @@ int		main(void)
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << "\e[1;32m\nGradeUp example\e[0m" << std::endl;
@@ -60,7 +71,7 @@ int		main(void)
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 
 	std::cout << "\e[1;32m\nGradeDown example\e[0m" << std::endl;
@@ -73,7 +84,7 @@ int		main(void)
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << e.what() << std::endl;
 	}
 	
 	

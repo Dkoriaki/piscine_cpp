@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:04:17 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/17 15:49:15 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/18 10:12:24 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <string>
 #include "Form.hpp"
+
+class Form;
 
 class Bureaucrat
 {
@@ -40,6 +42,7 @@ class Bureaucrat
 		int				getGrade(void) const ;
 		void			gradeUp(void);
 		void			gradeDown(void);
+		
 		void			signForm(Form & form);
 
 	private:

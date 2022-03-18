@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:03:59 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/17 15:59:48 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/18 10:19:48 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,16 @@ void	Bureaucrat::gradeUp(void)
 	
 }
 
+void	Bureaucrat::gradeDown(void)
+{
+	this->_grade++;
+	if (this->_grade > 150)
+		throw Bureaucrat::GradeTooLowException();
+	std::cout << this->getName()
+		<< " I have bad news, you are downgraded[" << this->getGrade() - 1 
+		<< "->" << this->getGrade() << "]" << std::endl;
+}
+
 void	Bureaucrat::signForm(Form & form)
 {
 	try
@@ -89,19 +99,9 @@ void	Bureaucrat::signForm(Form & form)
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cerr << this->getName() << " couldn't sign " << form.getName()
+		<< " because " << e.what() << std::endl;
 	}
-	
-}
-
-void	Bureaucrat::gradeDown(void)
-{
-	this->_grade++;
-	if (this->_grade > 150)
-		throw Bureaucrat::GradeTooLowException();
-	std::cout << this->getName()
-		<< " I have bad news, you are downgraded[" << this->getGrade() - 1 
-		<< "->" << this->getGrade() << "]" << std::endl;
 }
 
 /*

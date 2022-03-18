@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 15:29:17 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/17 15:41:14 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/18 10:10:48 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <iostream>
 #include <string>
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form
 {
@@ -30,6 +32,7 @@ class Form
 			public:
 				virtual const char * what() const throw();
 		};
+		Form();
 		Form(std::string name, int grade);
 		Form(Form const & src);
 		~Form();
@@ -45,7 +48,6 @@ class Form
 
 
 	private:
-		Form();
 		std::string		_name;
 		bool			_signed;
 		int				_gradeSign;
