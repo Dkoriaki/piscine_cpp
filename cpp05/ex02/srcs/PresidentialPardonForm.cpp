@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:09:24 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/18 21:50:40 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/21 23:46:00 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 	try
 	{
 		AForm::execute(executor);
-		std::cout << executor.getName() <<  "was forgiven by Zaphod Beeblebrox." << std::endl;
+		std::cout << this->getTarget() <<  " was forgiven by Zaphod Beeblebrox." << std::endl;
 	}
 	catch(const std::exception& e)
 	{
