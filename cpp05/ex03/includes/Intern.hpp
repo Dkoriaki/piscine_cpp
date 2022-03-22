@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 00:13:03 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/22 00:22:19 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:57:24 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ class Intern
 		AForm	*makeForm(std::string form, std::string target);
 
 	private:
-		std::string		_formName[3];
 		AForm	*_createShrubberyForm(std::string target);
 		AForm	*_createRobotomyForm(std::string target);
 		AForm	*_createPresidentialForm(std::string target);

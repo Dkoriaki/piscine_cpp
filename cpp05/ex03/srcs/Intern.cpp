@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 00:20:08 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/22 00:58:25 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/22 16:57:18 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,6 @@
 Intern::Intern(void)
 {
 	std::cout << "Intern has been created" << std::endl;
-	this->_formName[0] = "ShrubberyCreationForm";
-	this->_formName[1] = "RobotomyRequestForm";
-	this->_formName[2] = "PresidentialPardonForm";
 }
 
 Intern::Intern(Intern const & src)
