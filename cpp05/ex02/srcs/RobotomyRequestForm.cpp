@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:09:32 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/22 17:24:14 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 10:51:54 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ RobotomyRequestForm &		RobotomyRequestForm::operator=( RobotomyRequestForm const
 	std::cout << "RobotomyRequestForm assignement operator called" << std::endl;
 	if (this != &rhs)
 	{
-		this->_name = rhs.getName();
+		//this->_name = rhs.getName();
 		this->_signed = rhs.getSigned();
-		this->_gradeSign = rhs.getGradeSign();
-		this->_gradeExecute = rhs.getGradeExecute();
-		this->_target = rhs.getTarget();
+		//this->_gradeSign = rhs.getGradeSign();
+		//this->_gradeExecute = rhs.getGradeExecute();
+		//this->_target = rhs.getTarget();
 	}
 	return (*this);
 }

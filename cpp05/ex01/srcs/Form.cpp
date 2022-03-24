@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 15:29:26 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/18 10:19:09 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 09:45:36 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,8 @@ Form::Form(std::string name, int gradeSign) : _name(name), _signed(false), _grad
 		throw Form::GradeTooLowException();
 }
 
-Form::Form(Form const & src)
+Form::Form(Form const & src) : _name(src.getName()), _signed(src.getSigned()),  _gradeSign(src.getGradeSign()), _gradeExecute(src.getGradeExecute())
 {
-	*this = src;
 	std::cout << "Form copy constructor called" << std::endl;
 }
 
@@ -97,10 +96,10 @@ Form &	Form::operator=(Form const & rhs)
 	std::cout << "Form assignement operator called" << std::endl;
 	if (this != &rhs)
 	{
-		this->_name = rhs.getName();
+		//this->_name = rhs.getName();
 		this->_signed = rhs.getSigned();
-		this->_gradeSign = rhs.getGradeSign();
-		this->_gradeExecute = rhs.getGradeExecute();
+		//this->_gradeSign = rhs.getGradeSign();
+		//this->_gradeExecute = rhs.getGradeExecute();
 	}
 	return (*this);
 }

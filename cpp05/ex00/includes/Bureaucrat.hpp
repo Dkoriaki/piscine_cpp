@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:04:17 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/17 12:04:41 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 09:31:25 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ class Bureaucrat
 
 	private:
 		Bureaucrat();
-		std::string		_name;
-		int				_grade;
+		std::string const	_name;
+		int					_grade;
 
 };
 

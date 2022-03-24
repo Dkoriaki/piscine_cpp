@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:03:59 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/17 12:47:50 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 09:37:09 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ Bureaucrat & Bureaucrat::operator=(Bureaucrat const & rhs)
 	std::cout << "Bureaucrat assignment operator called" << std::endl;
 	if (this != &rhs)
 	{
-		this->_name = rhs.getName();
+		//this->_name = rhs.getName(); /!\\ Const attribut
 		this->_grade = rhs.getGrade();
 	}
 	return(*this);

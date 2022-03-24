@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 15:29:17 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/18 10:10:48 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 09:29:55 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ class Form
 
 
 	private:
-		std::string		_name;
-		bool			_signed;
-		int				_gradeSign;
-		int				_gradeExecute;
+		std::string	const	_name;
+		bool				_signed;
+		int	const			_gradeSign;
+		int	const			_gradeExecute;
 
 };
 

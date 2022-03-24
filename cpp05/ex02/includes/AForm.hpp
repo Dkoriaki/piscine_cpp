@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 15:29:17 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/18 15:53:16 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 10:50:58 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,11 @@ class AForm
 
 
 	protected:
-		std::string		_target;
-		std::string		_name;
-		bool			_signed;
-		int				_gradeSign;
-		int				_gradeExecute;
+		std::string 		_target;
+		std::string	const	_name;
+		bool				_signed;
+		int	const			_gradeSign;
+		int	const			_gradeExecute;
 
 };
 

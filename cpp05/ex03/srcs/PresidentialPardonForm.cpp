@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 14:09:24 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/21 23:46:00 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 11:06:35 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,11 +53,11 @@ PresidentialPardonForm &		PresidentialPardonForm::operator=( PresidentialPardonF
 	std::cout << "PresidentialPardonForm assignement operator called" << std::endl;
 	if (this != &rhs)
 	{
-		this->_name = rhs.getName();
+		//this->_name = rhs.getName();
 		this->_signed = rhs.getSigned();
-		this->_gradeSign = rhs.getGradeSign();
-		this->_gradeExecute = rhs.getGradeExecute();
-		this->_target = rhs.getTarget();
+		//this->_gradeSign = rhs.getGradeSign();
+		//this->_gradeExecute = rhs.getGradeExecute();
+		//this->_target = rhs.getTarget();
 	}
 	return (*this);
 }

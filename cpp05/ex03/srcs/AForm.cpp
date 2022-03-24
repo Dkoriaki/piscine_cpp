@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 15:29:26 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/18 15:54:18 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 11:08:16 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,8 @@ AForm::AForm(std::string name, int gradeSign, int gradeExecute) : _name(name), _
 		throw AForm::GradeTooLowException();
 }
 
-AForm::AForm(AForm const & src)
+AForm::AForm(AForm const & src) : _name(src.getName()), _signed(src.getSigned()),  _gradeSign(src.getGradeSign()), _gradeExecute(src.getGradeExecute())
 {
-	*this = src;
 	std::cout << "Form copy constructor called" << std::endl;
 }
 
@@ -115,10 +114,10 @@ AForm &	AForm::operator=(AForm const & rhs)
 	std::cout << "Form assignement operator called" << std::endl;
 	if (this != &rhs)
 	{
-		this->_name = rhs.getName();
+		//this->_name = rhs.getName();
 		this->_signed = rhs.getSigned();
-		this->_gradeSign = rhs.getGradeSign();
-		this->_gradeExecute = rhs.getGradeExecute();
+		//this->_gradeSign = rhs.getGradeSign();
+		//this->_gradeExecute = rhs.getGradeExecute();
 	}
 	return (*this);
 }
