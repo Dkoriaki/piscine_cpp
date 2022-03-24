@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/17 11:03:16 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/21 23:47:06 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/24 07:54:38 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,5 +52,7 @@ int		main(void)
 
 	b4.signForm(f4);
 	b4.executeForm(f4);
+
+	std::cout << std::endl;
 	return (0);
 }
