@@ -6,28 +6,21 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/24 11:43:21 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/24 15:32:11 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/26 16:14:56 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Converter.hpp"
 
-bool	isPrintable(char c)
+int		detectType(std::string str)
 {
-	if ((c > 31 && c < 48) || (c > 57 && c < 127 ))
-		return (true);
-	return (false);
-}
-
-void	printChar(std::string str)
-{
-	char	c(str[0]);
-
-	std::cout << std::fixed << std::setprecision(10);
-	std::cout << "char: \e[1;32m[\e[0m" << c << "\e[1;32m]\e[0m" << std::endl;
-	std::cout << "int: \e[1;32m[\e[0m" << static_cast<int>(c) << "\e[1;32m]\e[0m" << std::endl;
-	std::cout << "float: \e[1;32m[\e[0m" << static_cast<float>(c) << "\e[1;32m]\e[0m" << std::endl;
-	std::cout << "double: \e[1;32m[\e[0m" << static_cast<double>(c) << "\e[1;32m]\e[0m" << std::endl;
+	if (detectChar(str))
+		return (0);
+	else if (detectInt(str))
+		return (1);
+	else if (detectFloat(str))
+		return (2);
+	return (4);
 }
 
 bool	detectChar(std::string str)
@@ -35,6 +28,52 @@ bool	detectChar(std::string str)
 	if (str.length() == 1 && isPrintable(str[0]) && !isdigit(str[0]))
 		return (true);
 	return (false);
+}
+
+bool	detectInt(std::string str)
+{
+	size_t	size(str.length());
+
+	for (size_t i(0); i < size; i++)
+	{
+		if (!isdigit(str[i]))
+			return (false);
+	}
+	return (true);
+}
+
+bool	detectFloat(std::string str)
+{
+	size_t	size(str.length());
+
+	for (size_t i(0); i < size; i++)
+	{
+		if (!isdigit(str[i]))
+		{
+			if (str[i] != '.' || str[i] != 'f')
+				return (false);
+			else if (str[i] == 'f' && !str[i + 1])
+				return (true);
+		}
+	}
+	return (true);
+}
+
+
+{
+	if ((c > 31 && c < 48) || (c > 57 && c < 127 ))
+		return (true);
+	return (false);
+}
+
+bool	detectLiterals(std::string str)
+{
+	if (str == "-inff" || str == "+inff" || str == "nanf")
+		return (true);
+	if (str == "-inf" || str == "+inf" || str == "nan")
+		return (true);
+	return (false);
+	
 }
 
 bool	argParse(int ac, char **av)
@@ -45,11 +84,14 @@ bool	argParse(int ac, char **av)
 	int				count_num(0);
 	int				i(0);
 	bool			error(false);
+	bool			is_Literal(false);
 	std::string		arg;
 
 	if (ac != 2 || (ac == 2 && (arg = av[1]).length() == 0))
 		error = true;
-	while (arg[i] && error == false)
+	if (av[1])
+		is_Literal = detectLiterals(av[1]);
+	while (arg[i] && error == false && is_Literal == false)
 	{
 		if (isPrintable(arg[i]))
 		{
