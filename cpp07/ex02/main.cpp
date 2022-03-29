@@ -6,12 +6,13 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 14:00:54 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/29 14:01:19 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/29 17:56:58 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <Array.hpp>
+#include <stdlib.h>
+#include "Array.hpp"
 
 #define MAX_VAL 750
 int main(int, char**)
