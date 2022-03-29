@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 17:03:24 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/29 17:56:18 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/29 22:21:12 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,11 @@ class	Array
 			for (unsigned int i = 0; i < _size; i++)
 				this->_rawArray[i] = T();
 		}
-		Array(T const & src) : _rawArray(NULL), _size(0) { *this = src; }
-		~Array() {}
+		Array(Array const & src) : _rawArray(NULL), _size(0) { *this = src; }
+		~Array() {
+			if (_rawArray != NULL)
+				delete [] _rawArray;
+		}
 
 		Array &		operator=(Array const & rhs) {
 			if (this != &rhs)
@@ -46,9 +49,9 @@ class	Array
 			return(*this);
 		}
 
-		T	&	operaror[](unsigned int position) const {
+		T &	operator[](unsigned int const position) const {
 			if (position >= this->_size)
-				throw (Array::OperatorOutOfRangeException)
+				throw OperatorOutOfRangeException();
 			return (this->_rawArray[position]);
 		}
 
