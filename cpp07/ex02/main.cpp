@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 14:00:54 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/29 23:12:28 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/29 23:17:28 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,11 @@ int main(int, char**)
 		std::cerr << e.what() << '\n';
 	}
 	
+	std::cout << "\n\e[1;35m- - - - Empty array - - - -\e[0m\n" << std::endl;
+
+	Array<int>	emptyArray;
+	std::cout << "emptyArray size = " << emptyArray.size() << std::endl;
+
 	std::cout << "\n\e[1;35m- - - - Default init - - - -\e[0m\n" << std::endl;
 
 	try
