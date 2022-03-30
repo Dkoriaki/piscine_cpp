@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:38:38 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/30 18:05:40 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/30 21:23:49 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,11 @@ class	Span
 		int		longestSpan(void);
 
 	private:
-		std::vector<int>	array;
-		size_t				size;
+		std::vector<int>	_array;
+		size_t				_size;
 
 }
+
+std::ostream &	operator<<(std::ostream & o, Span const & rhs);
 
 #endif
