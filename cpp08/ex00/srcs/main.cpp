@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:03:21 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/30 17:31:17 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/31 18:28:58 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 	std::cout << "\e[1;39mLet's try this amazing main, press ENTER to start\e[0m" << std::endl;
 	pause = getc(stdin);
 
-	std::cout << "\e[1;32mINT\e[0m" << std::endl;
+	std::cout << "\e[1;32m1st Test\e[0m" << std::endl;
 	{
 		std::vector<int> tab;
 
@@ -65,7 +65,7 @@ int	main(void)
 	}
 	std::cout << "\n\e[1;39mPlease press ENTER to continue\e[0m" << std::endl;
 	pause = getc(stdin);
-	std::cout << "\e[1;32mRandom\e[0m" << std::endl;
+	std::cout << "\e[1;32m2nd test with Random\e[0m" << std::endl;
 	{
 		std::vector<int>	tab;
 
@@ -124,7 +124,6 @@ int	main(void)
 		{
 			std::cerr << e.what() << '\n';
 		}
-		
 	}
 	
 	return (0);

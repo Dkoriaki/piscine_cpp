@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:03:54 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/30 16:54:10 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/31 14:45:22 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ typename T::iterator	easyfind(T & src, int toFind)
 {
 	typename T::iterator	it = find(src.begin(), src.end(), toFind);
 
-	if (it != src.end())
-		return (it);
-	else
+	if (it == src.end())
 		throw notFound();
+	return (it);
+
 }
 
 #endif
