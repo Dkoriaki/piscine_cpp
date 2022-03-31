@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 15:03:21 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/31 18:28:58 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/31 18:34:26 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,18 @@ int	main(void)
 		tab.push_back(42);
 		tab.push_back(-10);
 
+		std::cout << "tab = ";
+		for (size_t i(0); i < tab.size(); i++)
+		{
+			std::cout << tab[i] << " | ";
+		}
+		std::cout << std::endl << std::endl;
 		std::vector<int>::iterator it;
 
 		try
 		{
 			it = easyfind(tab, 2);
-			std::cout << *it << std::endl;
+			std::cout << *it << " is found" << std::endl;
 		}
 		catch(const std::exception& e)
 		{
@@ -47,7 +53,7 @@ int	main(void)
 		try
 		{
 			it = easyfind(tab, -10);
-			std::cout << *it << std::endl;
+			std::cout << *it << " is found" << std::endl;
 		}
 		catch(const std::exception& e)
 		{
@@ -56,7 +62,7 @@ int	main(void)
 		try
 		{
 			it = easyfind(tab, 484448);
-			std::cout << *it << std::endl;
+			std::cout << *it << " is found" << std::endl;
 		}
 		catch(const std::exception& e)
 		{
