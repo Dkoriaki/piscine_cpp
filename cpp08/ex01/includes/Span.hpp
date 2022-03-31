@@ -6,7 +6,7 @@
 /*   By: dkoriaki <dkoriaki@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 17:38:38 by dkoriaki          #+#    #+#             */
-/*   Updated: 2022/03/30 18:05:40 by dkoriaki         ###   ########.fr       */
+/*   Updated: 2022/03/31 14:25:48 by dkoriaki         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class	Span
 		Span &	operator=(Span const & rhs);
 
 		void	addNumber(int number);
-		int		shortestSpan(void);
+		int		shortestSpan(void); 
 		int		longestSpan(void);
 
 	private:
